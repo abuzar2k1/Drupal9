@@ -1,0 +1,5 @@
+name: Hook event form alter
+description: Hook event form alter
+type: module
+core: 8.x
+core_version_requirement: ^8 || ^9

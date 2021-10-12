@@ -1,0 +1,5 @@
+services:
+  example.route_subscriber:
+    class: Drupal\drupalup_route_alter\Routing\RouteSubscriber
+    tags:
+      - { name: event_subscriber }

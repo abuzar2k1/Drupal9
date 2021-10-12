@@ -1,0 +1,15 @@
+custon_json_api.listing:
+  path: '/json/listing'
+  defaults: 
+    _controller: '\Drupal\custom_json_api\Controller\JsonApiController::listingAll'
+    methods:  [GET]
+  requirements: 
+    _permission: 'access content'
+
+custon_json_api.details:
+  path: '/json/article-details'
+  defaults: 
+    _controller: '\Drupal\custom_json_api\Controller\JsonApiController::articleDetails'
+  methods:  [POST]
+  requirements:
+    _permission: 'access content'
