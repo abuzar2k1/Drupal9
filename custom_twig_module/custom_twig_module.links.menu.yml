@@ -1,0 +1,5 @@
+custom_twig_module.mlink:
+  title: 'Tabs Example'
+  route_name: customtwig.content
+  description: 'A description for the menu entry'
+  base_route: main

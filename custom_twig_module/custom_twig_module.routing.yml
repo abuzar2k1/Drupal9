@@ -1,0 +1,13 @@
+customtwig.content:
+    path: /custom-twig-template
+    defaults:
+        _controller: Drupal\custom_twig_module\Controller\TestTwigController::content
+    requirements:
+        _permission: 'custommodule permission'
+
+customtwig.content.second:
+    path: /custom-twig-template/first
+    defaults:
+        _controller: Drupal\custom_twig_module\Controller\TestTwigController::contentsecond
+    requirements:
+        _permission: 'custommodule permission'

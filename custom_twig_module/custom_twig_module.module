@@ -1,0 +1,23 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+/*function custom_twig_module_theme($existing, $type, $theme, $path) {
+  return [
+    'my_template' => [
+      'variables' => ['test_var' => NULL],
+    ],
+  ];
+}*/
+
+function custom_twig_module_theme($existing, $type, $theme, $path) {
+  return [
+    'my_template' => [
+      'variables' => [
+        'title' => NULL,
+        'test_var' => [],
+      ],
+    ],
+  ];
+}
