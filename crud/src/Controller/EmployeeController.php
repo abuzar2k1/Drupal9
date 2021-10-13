@@ -9,6 +9,10 @@ class EmployeeController extends ControllerBase{
     
     public function getEmployeeList() {
         
+        /*$service = \Drupal::service('custom_service.custom_services');
+        print_r($service->getServiceData());
+        die;*/
+
         $limit = 3;
 
         $query = \Drupal::database();
