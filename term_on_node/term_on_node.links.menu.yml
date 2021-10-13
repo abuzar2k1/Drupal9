@@ -1,0 +1,6 @@
+term_on_node.demo:
+  title: 'Create Node'
+  description: 'Create Node'
+  parent: main
+  menu_name: main
+  route_name: term_on_node.createNode
