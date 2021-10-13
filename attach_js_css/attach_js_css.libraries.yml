@@ -1,0 +1,10 @@
+libname:
+  version: 1.x
+  js:
+    js/my.js: {}
+  css:
+    theme:
+      css/my.css: {}
+  dependencies:
+    - core/jquery
+    - core/drupalSettings

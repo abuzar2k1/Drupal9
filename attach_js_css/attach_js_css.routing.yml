@@ -1,0 +1,6 @@
+attach_js_css.attachJsCss:
+    path: /custom-attach-js
+    defaults:
+        _controller: Drupal\attach_js_css\Controller\AttachJsCss::attachJsCss
+    requirements:
+        _permission: 'access content'
