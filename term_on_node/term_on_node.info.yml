@@ -1,0 +1,5 @@
+name: Custom node with taxonomy
+description: Custom node with select taxonomy
+type: module
+core: 8.x
+core_version_requirement: ^8 || ^9

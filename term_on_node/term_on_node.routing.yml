@@ -1,0 +1,6 @@
+term_on_node.createNode:
+  path: '/create-node'
+  defaults:
+    _controller: '\Drupal\term_on_node\Controller\SelectTermOnNodeCreate::createNode'
+  requirements:
+    _access: 'TRUE'
