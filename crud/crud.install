@@ -1,0 +1,39 @@
+<?php
+
+function crud_schema(){
+
+    $schema['employee'] = [
+
+        'fields' => [
+
+            'id' => [
+                'description' => 'employee id',
+                'type' => 'serial',
+                'not null' => TRUE
+            ],
+            'name' => [
+                'length' => 50,
+                'type' => 'varchar',
+                'not null' => TRUE
+            ],
+            'email' => [
+                'length' => 50,
+                'type' => 'varchar',
+                'not null' => TRUE
+            ],
+            'phone' => [
+                'length' => 10,
+                'type' => 'varchar',
+                'not null' => TRUE
+            ]
+        ],
+        'primary key' => ['id'],
+        'indexes' => [
+            'id' => ['id'],
+            'name' => ['name']
+        ]
+    ];
+
+    return $schema;
+
+}
