@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+
+function custom_youtube_fieldformatter_theme($existing, $type, $theme, $path) {
+
+  /*return [
+    'custom_template' => [
+      'variables' => [
+        'url' => NULL,
+      ],
+    ],
+  ];*/
+
+  return array(
+     'custom_template' => array(
+        'variables' => array('url' => NULL),
+        'template' => 'custom-template',
+      ),
+  );
+  
+}

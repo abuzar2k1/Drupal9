@@ -1,0 +1,9 @@
+name: 'Custom YouTube Field Formatter Plugin'
+type: module
+description: 'Custom YouTube Field Formatter Plugin created by drupal console'
+#core: 8.x
+package: 'n'
+core: 8.x
+core_version_requirement: ^8 || ^9
+
+

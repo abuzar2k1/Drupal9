@@ -1,0 +1,9 @@
+name: 'Custom Field Formatter'
+type: module
+description: 'Custom Field Formatter created by drupal console'
+#core: 8.x
+package: 'n'
+core: 8.x
+core_version_requirement: ^8 || ^9
+
+
