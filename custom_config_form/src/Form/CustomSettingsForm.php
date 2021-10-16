@@ -66,3 +66,11 @@ class CustomSettingsForm extends ConfigFormBase {
   }
 
 }
+
+/**
+ * Get value of config form fields
+ * 
+ * $config = \Drupal::config('custom_config_form.settings');
+ * $config->get('name')
+ * 
+ */
