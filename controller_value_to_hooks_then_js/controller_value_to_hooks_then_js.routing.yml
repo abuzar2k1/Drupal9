@@ -1,0 +1,13 @@
+controller_value_to_hooks_then_js.content:
+    path: /controller_value_to_hooks
+    defaults:
+        _controller: Drupal\controller_value_to_hooks_then_js\Controller\TestController::content
+    requirements:
+        _permission: 'access content'
+
+controller_value_to_hooks_then_js.ajaxcall:
+    path: /test_for_ajax_callback/{argone}/{argtwo}
+    defaults:
+        _controller: Drupal\controller_value_to_hooks_then_js\Controller\TestController::ajaxcallfn
+    requirements:
+        _permission: 'access content'
