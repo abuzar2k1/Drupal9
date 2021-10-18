@@ -1,0 +1,24 @@
+custom_form_block:
+    path: /hello/world
+    defaults:
+        _controller: Drupal\custom_form_block\Controller\HelloWorldController::hello
+    requirements:
+        _permission: 'access content'
+
+custom_form_block.my_form:
+  path: '/myform'
+  defaults:
+    _form: '\Drupal\custom_form_block\Form\MyForm'
+    _title: 'MyForm'
+  requirements:
+    _access: 'TRUE'
+
+custom_form_block.settings_form:
+  path: '/admin/config/custom_form_block/settings'
+  defaults:
+    _form: '\Drupal\custom_form_block\Form\SettingsForm'
+    _title: 'SettingsForm'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: TRUE

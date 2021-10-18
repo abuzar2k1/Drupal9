@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\hello_world\Form;
+namespace Drupal\custom_form_block\Form;
 
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
@@ -23,13 +23,13 @@ class MyForm extends FormBase {
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
 
-    $config = \Drupal::config('hello_world.settings');
+    $config = \Drupal::config('custom_form_block.settings');
 
     $form['name'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Name'),
       '#description' => $this->t('Enter your fullname'),
-      '#default_value' => $config->get('bio'),  // getting admin setting form value from /admin/config/hello_world/settings
+      '#default_value' => $config->get('bio'),  // getting admin setting form value from /admin/config/custom_form_block/settings
       '#maxlength' => 64,
       '#size' => 64,
       '#weight' => '0',

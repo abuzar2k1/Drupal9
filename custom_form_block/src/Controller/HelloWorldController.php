@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\hello_world\Controller;
+namespace Drupal\custom_form_block\Controller;
 
 class HelloWorldController {
     public function hello() {

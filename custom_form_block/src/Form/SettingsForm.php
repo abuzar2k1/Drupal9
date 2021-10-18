@@ -2,10 +2,10 @@
 
 /**
  * @file
- * Contains Drupal\hello_world\Form\SettingsForm.
+ * Contains Drupal\custom_form_block\Form\SettingsForm.
  */
 
-namespace Drupal\hello_world\Form;
+namespace Drupal\custom_form_block\Form;
 
 
 use Drupal\Core\Form\ConfigFormBase;
@@ -14,7 +14,7 @@ use Drupal\Core\Form\FormStateInterface;
 /**
  * Class SettingsForm.
  *
- * @package Drupal\hello_world\Form
+ * @package Drupal\custom_form_block\Form
  */
 class SettingsForm extends ConfigFormBase {
 
@@ -23,7 +23,7 @@ class SettingsForm extends ConfigFormBase {
    */
   protected function getEditableConfigNames() {
     return [
-      'hello_world.settings',
+      'custom_form_block.settings',
     ];
   }
 
@@ -38,7 +38,7 @@ class SettingsForm extends ConfigFormBase {
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
-    $config = $this->config('hello_world.settings');
+    $config = $this->config('custom_form_block.settings');
     $form['bio'] = array(
       '#type' => 'textarea',
       '#title' => $this->t('Bio'),
@@ -60,7 +60,7 @@ class SettingsForm extends ConfigFormBase {
   public function submitForm(array &$form, FormStateInterface $form_state) {
     parent::submitForm($form, $form_state);
 
-    $this->config('hello_world.settings')
+    $this->config('custom_form_block.settings')
       ->set('bio', $form_state->getValue('bio'))
       ->save();
   }

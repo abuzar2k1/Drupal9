@@ -1,5 +1,5 @@
 <?php
-namespace Drupal\hello_world\Plugin\Block;
+namespace Drupal\custom_form_block\Plugin\Block;
 
 use Drupal\Core\Block\BlockBase;
 
@@ -22,7 +22,7 @@ class HelloBlock extends BlockBase {
       '#markup' => $this->t('Hello, World!'),
     ];*/
 
-    $form = \Drupal::formBuilder()->getForm('Drupal\hello_world\Form\MyForm');
+    $form = \Drupal::formBuilder()->getForm('Drupal\custom_form_block\Form\MyForm');
 
     return $form;
 
