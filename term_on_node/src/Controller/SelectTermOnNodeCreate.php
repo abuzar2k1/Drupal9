@@ -18,6 +18,7 @@ class SelectTermOnNodeCreate extends ControllerBase{
             'title' => 'First content with code',
             'uid' => '1',
             'status' => 1,
+            
             //'created' => $data[$dateIndex],
             //'field_autor' => $data[$autorIndex],
             //'field_teaser_text' => $data[$shortIndex],
@@ -32,7 +33,7 @@ class SelectTermOnNodeCreate extends ControllerBase{
               ['target_id' => 2], ['target_id' => 3]
             ]
         ));
-        $node->save();
+        //$node->save();
 
         if($node->id() != '') {
             \Drupal::messenger()->addMessage('Node Created successfully.','status',TRUE);
