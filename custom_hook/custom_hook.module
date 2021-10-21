@@ -1,0 +1,13 @@
+<?php
+
+function custom_hook_get_all_nodes($list) {
+    
+    foreach($list as $key => $nid) {
+        dump($nid);
+    }
+}
+
+function custom_hook_get_all_nodes_alter(&$list) {
+
+    $list[] = 555;
+}
