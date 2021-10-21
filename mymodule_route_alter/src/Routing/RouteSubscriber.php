@@ -1,5 +1,5 @@
 <?php
-namespace Drupal\drupalup_route_alter\Routing;
+namespace Drupal\mymodule_route_alter\Routing;
 
 use Drupal\Core\Routing\RouteSubscriberBase;
 use Symfony\Component\Routing\RouteCollection;

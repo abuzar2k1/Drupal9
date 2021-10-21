@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\drupalup_event_form_alter\EventSubscriber;
+namespace Drupal\mymodule_event_form_alter\EventSubscriber;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Drupal\hook_event_dispatcher\HookEventDispatcherInterface;
 
