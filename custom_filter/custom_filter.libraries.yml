@@ -1,0 +1,5 @@
+filter_library:
+  version: 1.x
+  css:
+    theme:
+      css/filter.css: {}
