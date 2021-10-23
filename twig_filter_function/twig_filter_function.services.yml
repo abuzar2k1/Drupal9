@@ -1,0 +1,11 @@
+services:
+  twig_filter_function.function:
+    class: Drupal\twig_filter_function\TwigExtension\TwigFunction
+    tags:
+      - { name: twig.extension }
+
+  twig_filter_function.filter:
+    arguments: ['@renderer']
+    class: Drupal\twig_filter_function\TwigExtension\TwigFilter
+    tags:
+      - { name: twig.extension }

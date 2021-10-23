@@ -1,0 +1,5 @@
+name: Twig custom extension - Filter and function
+description: Twig custom extension - Filter and function
+type: module
+core: 8.x
+core_version_requirement: ^8 || ^9
