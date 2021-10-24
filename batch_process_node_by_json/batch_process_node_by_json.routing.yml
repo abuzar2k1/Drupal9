@@ -1,0 +1,7 @@
+batch_process_node_by_json.examplebatch:
+  path: '/admin/batch-import-example'
+  defaults:
+    _title: 'Import node'
+    _form: '\Drupal\batch_process_node_by_json\Form\MyForm'
+  requirements:
+    _permission: 'access content'

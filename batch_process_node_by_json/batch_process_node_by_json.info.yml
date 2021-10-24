@@ -1,0 +1,5 @@
+name: Batch Process create node by json
+description: Batch Process create node by json
+type: module
+core: 8.x
+core_version_requirement: ^8 || ^9
