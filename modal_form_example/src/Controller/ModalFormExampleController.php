@@ -17,7 +17,6 @@ class ModalFormExampleController extends ControllerBase {
    * Callback for opening the modal form.
    */
   public function openModalForm() {
-    $response = new AjaxResponse();
 
     // Get the modal form using the form builder.
     $modal_form = \Drupal::formBuilder()->getForm('Drupal\custom_form_block\Form\MyForm');
