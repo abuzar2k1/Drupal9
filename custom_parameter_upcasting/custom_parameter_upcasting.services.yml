@@ -1,0 +1,5 @@
+services:
+  my_menu:
+    class: Drupal\custom_parameter_upcasting\ParamConverter\CustomParamConverter
+    tags:
+      - { name: paramconverter }

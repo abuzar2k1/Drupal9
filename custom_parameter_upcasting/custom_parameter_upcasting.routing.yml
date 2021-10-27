@@ -1,0 +1,14 @@
+custom_parameter_upcasting.createNode:
+  path: '/node/{my_menu}/mytab'
+  defaults:
+    _title: 'My Title'
+    _form: '\Drupal\custom_parameter_upcasting\Form\MyModuleformControllerForm'
+  requirements:
+    _permission: 'access content'
+    #_permission: 'edit my page'
+    #_entity_access: 'my_menu.update'
+  options:
+    #_node_operation_route: TRUE
+    parameters:
+      my_menu:
+        type: my_menu
