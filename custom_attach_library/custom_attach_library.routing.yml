@@ -1,0 +1,6 @@
+custom_attach_library.attachJsCss:
+    path: /custom-attach-js
+    defaults:
+        _controller: Drupal\custom_attach_library\Controller\AttachJsCss::attachJsCss
+    requirements:
+        _permission: 'access content'

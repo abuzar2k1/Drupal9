@@ -1,28 +1,28 @@
 <?php
 
-function attach_js_css_page_attachments(array &$attachments) {
+function custom_attach_library_page_attachments(array &$attachments) {
 
   $path = $current_path = \Drupal::service('path.current')->getPath();
   $path_args = explode('/', $current_path);
 
   if($path_args[1] == 'custom-attach-js') {
-    $attachments['#attached']['library'][] = 'attach_js_css/libname';
+    $attachments['#attached']['library'][] = 'custom_attach_library/libname';
   }
 
 }
 
-/*function attach_js_css_page_attachments_alter(&$page){
+/*function custom_attach_library_page_attachments_alter(&$page){
 
   $path = $current_path = \Drupal::service('path.current')->getPath();
   $path_args = explode('/', $current_path);
 
   if($path_args[1] == 'custom-attach-js') {
-    $page['#attached']['library'][] = 'attach_js_css/libname';
+    $page['#attached']['library'][] = 'custom_attach_library/libname';
   }
 }*/
 
 /*
-function attach_js_css_preprocess_page(&$variables){
+function custom_attach_library_preprocess_page(&$variables){
   if ($variables['is_front'] == TRUE) {
     $variables['#attached']['library'][] = 'my-theme/my-library';
   }

@@ -1,4 +1,4 @@
-Drupal.behaviors.attach_js_css = {
+Drupal.behaviors.custom_attach_library = {
     attach: function (context, settings) {
       //$('.example', context).click(function () {
 
