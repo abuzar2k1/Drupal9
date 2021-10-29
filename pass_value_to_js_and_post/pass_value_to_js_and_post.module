@@ -1,10 +1,10 @@
 <?php
 
-use Drupal\controller_value_to_hooks_then_js\Controller\TestController;
+use Drupal\pass_value_to_js_and_post\Controller\TestController;
 
-function controller_value_to_hooks_then_js_page_attachments(array &$attachments) {
+function pass_value_to_js_and_post_page_attachments(array &$attachments) {
 
-  //$mydata = \Drupal\controller_value_to_hooks_then_js\Controller\TestController::content();
+  //$mydata = \Drupal\pass_value_to_js_and_post\Controller\TestController::content();
 
   $path = $current_path = \Drupal::service('path.current')->getPath();
   $path_args = explode('/', $current_path);
@@ -17,7 +17,7 @@ function controller_value_to_hooks_then_js_page_attachments(array &$attachments)
       //print_r($mydata['#title']);
       //die();
 
-      $attachments['#attached']['library'][] = 'controller_value_to_hooks_then_js/mylib-js';
+      $attachments['#attached']['library'][] = 'pass_value_to_js_and_post/mylib-js';
       // pass variable to Drupal.Settings
       $attachments['#attached']['drupalSettings']['mydata'] = $mydata['#title'];
 

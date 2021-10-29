@@ -1,0 +1,13 @@
+pass_value_to_js_and_post.content:
+    path: /controller_value_to_hooks
+    defaults:
+        _controller: Drupal\pass_value_to_js_and_post\Controller\TestController::content
+    requirements:
+        _permission: 'access content'
+
+pass_value_to_js_and_post.ajaxcall:
+    path: /test_for_ajax_callback/{argone}/{argtwo}
+    defaults:
+        _controller: Drupal\pass_value_to_js_and_post\Controller\TestController::ajaxcallfn
+    requirements:
+        _permission: 'access content'

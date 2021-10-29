@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\attach_js_css\Controller;
+namespace Drupal\custom_attach_library\Controller;
 use Drupal\Core\Controller\ControllerBase;
 
 class AttachJsCss extends ControllerBase {

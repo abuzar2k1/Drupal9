@@ -1,4 +1,4 @@
-name: controller_value_to_hooks_then_js
+name: pass_value_to_js_and_post
 type: module
 core: 8.x
 core_version_requirement: ^8 || ^9
