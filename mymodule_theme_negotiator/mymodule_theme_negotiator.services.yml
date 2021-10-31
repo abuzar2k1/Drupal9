@@ -1,0 +1,5 @@
+services:
+  theme.negotiator.example:
+    class: Drupal\mymodule_theme_negotiator\Theme\ThemeNegotiator
+    tags:
+      - { name: theme_negotiator, priority: 0 }
