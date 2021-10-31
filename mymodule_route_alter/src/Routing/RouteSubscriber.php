@@ -13,15 +13,19 @@ class RouteSubscriber extends RouteSubscriberBase {
    * {@inheritdoc}
    */
   protected function alterRoutes(RouteCollection $collection) {
+
     // Change path '/user/login' to '/hell'.
     if ($route = $collection->get('user.login')) {
       $route->setPath('/hell');
     }
+
     // Always deny access to '/user/logout'.
     // Note that the second parameter of setRequirement() is a string.
-    if ($route = $collection->get('user.logout')) {
+
+    /*if ($route = $collection->get('user.logout')) {
       $route->setRequirement('_access', 'FALSE');
-    }
+    }*/
+    
   }
 
 }
