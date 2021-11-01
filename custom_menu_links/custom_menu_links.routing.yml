@@ -1,0 +1,6 @@
+custom_menu_links.mylink:
+  path: '/my-custom-menu'
+  defaults:
+    _controller: '\Drupal\custom_menu_links\Controller\CustomMenuLinks::mylink'
+  requirements:
+    _access: 'TRUE'

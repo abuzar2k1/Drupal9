@@ -1,0 +1,6 @@
+custom_menu_links.mymenu:
+  title: 'My menu'
+  description: 'My menu'
+  parent: main
+  menu_name: main
+  route_name: custom_menu_links.mylink
