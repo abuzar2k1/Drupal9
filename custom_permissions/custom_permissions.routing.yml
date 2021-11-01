@@ -1,0 +1,6 @@
+custom_permissions.mypermission:
+  path: '/my-custom-permission'
+  defaults:
+    _controller: '\Drupal\custom_permissions\Controller\CustomPermission::mypermission'
+  requirements:
+    _permission: 'my custom permission'
