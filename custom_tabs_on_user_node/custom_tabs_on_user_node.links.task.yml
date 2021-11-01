@@ -1,0 +1,31 @@
+# Simple tab starts
+mytab.tab_1:
+  route_name : custom_tabs_on_user_node.tabone
+  title: mytab1
+  base_route: custom_tabs_on_user_node.tabone
+  weight: 10
+
+mytab.tab_2:
+  route_name: custom_tabs_on_user_node.tabtwo
+  title: mytab2
+  base_route: custom_tabs_on_user_node.tabone
+  weight: 20
+
+mytab.tab_3:
+  route_name: custom_tabs_on_user_node.tabthree
+  title: mytab3
+  base_route: custom_tabs_on_user_node.tabone
+  weight: 30
+
+# for user profile page
+mytab.userprofilepage:
+  route_name: custom_tabs_on_user_node.usertab
+  base_route: entity.user.canonical
+  title: 'Some User'
+
+# for node view page
+mytab.nodeview:
+  route_name: custom_tabs_on_user_node.nodeviewroute
+  title: 'MyTab'
+  base_route: entity.node.canonical
+  weight: 100

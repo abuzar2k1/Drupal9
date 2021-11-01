@@ -1,0 +1,42 @@
+custom_tabs_on_user_node.tabone:
+  path: '/my-custom-tabone'
+  defaults:
+    _controller: '\Drupal\custom_tabs_on_user_node\Controller\CustomTabs::tabone'
+  requirements:
+    _access: 'TRUE'
+
+custom_tabs_on_user_node.tabtwo:
+  path: '/my-custom-tabtwo'
+  defaults:
+    _controller: '\Drupal\custom_tabs_on_user_node\Controller\CustomTabs::tabtwo'
+  requirements:
+    _access: 'TRUE'
+
+custom_tabs_on_user_node.tabthree:
+  path: '/my-custom-tabthree'
+  defaults:
+    _controller: '\Drupal\custom_tabs_on_user_node\Controller\CustomTabs::tabthree'
+  requirements:
+    _access: 'TRUE'
+
+# tab on user profile page:
+custom_tabs_on_user_node.usertab:
+  path: '/user/{user}/usertab'
+  defaults:
+    _controller: '\Drupal\custom_tabs_on_user_node\Controller\CustomTabs::tabuser'
+    _title: 'Some Tab'
+  requirements:
+    _permission: 'access content'
+  options:
+    user: \d+
+
+# tab on node view page
+custom_tabs_on_user_node.nodeviewroute:
+  path: '/node/{node}/reviews'
+  defaults:
+    _controller: '\Drupal\custom_tabs_on_user_node\Controller\CustomTabs::nodeviewfn'
+    _title: 'Mytab'
+  requirements:
+    _permission: 'access content'
+  options:
+    node: \d+
