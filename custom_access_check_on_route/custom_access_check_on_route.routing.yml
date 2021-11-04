@@ -1,0 +1,6 @@
+example:
+  path: '/example-route-check'
+  defaults:
+    _controller: '\Drupal\custom_access_check_on_route\Controller\ExampleController::content'
+  requirements:
+    _custom_access: '\Drupal\custom_access_check_on_route\Controller\ExampleController::access'
