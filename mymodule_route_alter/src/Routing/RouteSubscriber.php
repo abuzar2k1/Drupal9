@@ -21,6 +21,7 @@ class RouteSubscriber extends RouteSubscriberBase {
 
     // Always deny access to '/user/logout'.
     // Note that the second parameter of setRequirement() is a string.
+    
 
     /*if ($route = $collection->get('user.logout')) {
       $route->setRequirement('_access', 'FALSE');
