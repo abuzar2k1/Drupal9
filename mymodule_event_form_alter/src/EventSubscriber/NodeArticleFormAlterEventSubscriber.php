@@ -23,6 +23,7 @@ class NodeArticleFormAlterEventSubscriber implements EventSubscriberInterface {
                 '#type' => 'markup',
                 '#markup' => '<b>Hook events form alter example</b>'
             ];
+            
             $event->setForm($form);
 
         }
