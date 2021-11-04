@@ -30,7 +30,7 @@ class JsonApiController extends ControllerBase {
 		}
 
         /*
-        // Hospitals Taxonomy Terms
+        // Taxonomy Terms
 		$vid = 'hospitals';
 		$terms = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->loadTree($vid);
 		foreach ($terms as $term) {
