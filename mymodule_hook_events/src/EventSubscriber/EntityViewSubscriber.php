@@ -23,6 +23,7 @@ class EntityViewSubscriber implements EventSubscriberInterface {
         ];
 
         $event->setBuild($build);
+        
 
         //kint($event->getBuild());
         //die;
