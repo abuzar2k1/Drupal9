@@ -1,0 +1,5 @@
+services:
+  custom_advance_access_check.advance:
+    class: Drupal\custom_advance_access_check\Access\CustomAccessCheck
+    tags:
+      - { name: access_check, applies_to: mycustom_access_check }

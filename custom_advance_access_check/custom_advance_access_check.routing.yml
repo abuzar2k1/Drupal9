@@ -1,0 +1,7 @@
+example.advance_check:
+  path: '/example-advance-check'
+  defaults:
+    _controller: '\Drupal\custom_advance_access_check\Controller\HomePageController::content'
+  requirements:
+    _permission: 'access content'
+    mycustom_access_check: 'TRUE'

@@ -1,0 +1,5 @@
+name: Custom advance access checking
+description: Custom advance access checking
+type: module
+core: 8.x
+core_version_requirement: ^8 || ^9
