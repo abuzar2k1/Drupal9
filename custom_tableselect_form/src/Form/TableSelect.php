@@ -102,6 +102,9 @@ class TableSelect extends FormBase {
 
     $postdata = $form_state->getValues();
     echo '<pre>';
+    print_r($postdata);
+    die;
+    echo '<pre>';
     print_r($postdata['table']);
 
     foreach($postdata['table'] as $k=>$v){

@@ -10,7 +10,6 @@ use Drupal\Core\Form\FormStateInterface;
  */
 class TableSelectForm extends FormBase {
 
-
   /**
    * {@inheritdoc}
    */
@@ -22,6 +21,44 @@ class TableSelectForm extends FormBase {
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
+
+    /*
+    $query = \Drupal::database()->select('users_field_data', 'u');
+    $query->fields('u', ['uid','name','mail']);
+    $results = $query->execute()->fetchAll();
+
+    $header = [
+      'userid' => t('User id'),
+      'Username' => t('username'),
+      'email' => t('Email'),
+    ];
+
+    // Initialize an empty array
+    $output = array();
+
+    // Next, loop through the $results array
+    foreach ($results as $result) {
+        if ($result->uid != 0 && $result->uid != 1) {
+          $output[$result->uid] = [
+            'userid' => $result->uid,     // 'userid' was the key used in the header
+            'Username' => $result->name, // 'Username' was the key used in the header
+            'email' => $result->mail,    // 'email' was the key used in the header
+          ];
+        }
+    }
+
+    $form['table'] = [
+      '#type' => 'tableselect',
+      '#header' => $header,
+      '#options' => $output,
+      '#empty' => t('No users found'),
+    ];
+
+    $form['submit'] = array(
+      '#type' => 'submit',
+      '#value' => t('Submit'),
+    );
+    */
     
     $group_class = 'group-order-weight';
     $items = [
