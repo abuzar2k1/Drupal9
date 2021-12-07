@@ -1,0 +1,7 @@
+custom_tabledrag_form.tbselect_form:
+  path: '/tabledrag-form'
+  defaults:
+    _form: '\Drupal\custom_tabledrag_form\Form\TableSelectForm'
+    _title: 'Tabledrag'
+  requirements:
+    _access: 'TRUE'
