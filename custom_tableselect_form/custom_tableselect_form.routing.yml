@@ -1,0 +1,7 @@
+custom_tableselect_form.tbselect:
+  path: '/tableselect-form'
+  defaults:
+    _form: '\Drupal\custom_tableselect_form\Form\TableSelect'
+    _title: 'TableSelect'
+  requirements:
+    _access: 'TRUE'
