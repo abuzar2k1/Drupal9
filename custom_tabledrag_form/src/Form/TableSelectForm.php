@@ -139,10 +139,18 @@ class TableSelectForm extends FormBase {
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
-    // Display result.
+    $postdata = $form_state->getValues();
     echo '<pre>';
-    print_r($form_state->getValues());
-    //die;
+    print_r($postdata);
+    die;
+    echo '<pre>';
+    print_r($postdata['table']);
+
+    foreach($postdata['table'] as $k=>$v){
+      echo $k.'====='.$v;
+      echo '<br>';
+    }
+    die;
 
   }
 
