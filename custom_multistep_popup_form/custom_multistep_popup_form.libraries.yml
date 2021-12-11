@@ -1,0 +1,10 @@
+multistep_form:
+  version: 1.x
+  css:
+    theme:
+      css/multistep_form.css: {}
+  js:
+    scripts/multistep_form.js: {}
+  dependencies:
+    - core/jquery
+    - core/jquery.once

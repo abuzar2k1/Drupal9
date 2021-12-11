@@ -1,0 +1,8 @@
+custom_multistep_popup_form.multistep_popup_form:
+  path: '/multistep-popup-form'
+  defaults:
+    _form: '\Drupal\custom_multistep_popup_form\Form\MultiPopupForm'
+    _title: 'Multistep popup form'
+  requirements:
+    _permission: 'access content'
+
