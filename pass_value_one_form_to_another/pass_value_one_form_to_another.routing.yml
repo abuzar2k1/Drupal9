@@ -1,0 +1,50 @@
+#USING FORM ACTION
+pass_value_one_form_to_another.actionfirstform:
+  path: '/actionfirstform'
+  defaults:
+    _title: 'Action First Form'
+    _form: '\Drupal\pass_value_one_form_to_another\Form\ActionFirstForm'
+  requirements:
+    _access: 'TRUE'
+    
+pass_value_one_form_to_another.actionsecondform:
+  path: '/actionsecondform'
+  defaults:
+    _title: 'Action Second Form'
+    _form: '\Drupal\pass_value_one_form_to_another\Form\ActionSecondForm'
+  requirements:
+    _access: 'TRUE'
+
+# USING SESSION
+pass_value_one_form_to_another.sessionfirstform:
+  path: '/sessionfirstform'
+  defaults:
+    _title: 'Session First Form'
+    _form: '\Drupal\pass_value_one_form_to_another\Form\SessionFirstForm'
+  requirements:
+    _access: 'TRUE'
+    
+pass_value_one_form_to_another.sessionsecondform:
+  path: '/sessionsecondform'
+  defaults:
+    _title: 'Session Second Form'
+    _form: '\Drupal\pass_value_one_form_to_another\Form\SessionSecondForm'
+  requirements:
+    _access: 'TRUE'
+
+# USING CONFIGURATION
+pass_value_one_form_to_another.configfirstform:
+  path: '/configfirstform'
+  defaults:
+    _title: 'Config First Form'
+    _form: '\Drupal\pass_value_one_form_to_another\Form\ConfigFirstForm'
+  requirements:
+    _access: 'TRUE'
+    
+pass_value_one_form_to_another.configsecondform:
+  path: '/configsecondform'
+  defaults:
+    _title: 'Config Second Form'
+    _form: '\Drupal\pass_value_one_form_to_another\Form\ConfigSecondForm'
+  requirements:
+    _access: 'TRUE'

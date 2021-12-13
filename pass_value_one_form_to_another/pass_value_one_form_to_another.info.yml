@@ -1,0 +1,5 @@
+name: pass value one form to another
+description: pass value one form to another - using form action, session, config
+type: module
+core: 8.x
+core_version_requirement: ^8 || ^9
