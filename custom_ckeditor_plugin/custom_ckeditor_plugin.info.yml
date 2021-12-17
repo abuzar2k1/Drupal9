@@ -1,0 +1,7 @@
+name: 'Custom CKEditor Plugin'
+type: module
+description: 'Custom CKEditor Plugin'
+core: 8.x
+core_version_requirement: ^8 || ^9
+
+
