@@ -1,0 +1,7 @@
+render_form_in_template.add_student:
+  path: '/add/students'
+  defaults:
+    _title: 'Add Students'
+    _form: '\Drupal\render_form_in_template\Form\StudentForm'
+  requirements:
+    _access: 'TRUE'
