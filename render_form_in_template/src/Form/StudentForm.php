@@ -57,6 +57,12 @@ class StudentForm extends FormBase {
         '#button_type' => 'primary',
         '#default_value' => $this->t('Save') ,
       ];
+
+      $form['image_div'] = array(
+        '#prefix' => '<div class="image">',
+        '#suffix' => '</div>',
+        '#markup' => '<img src="https://dummyimage.com/medrect" />'
+      );
       
       $form['#theme'] = 'students_add_form';
       return $form;
