@@ -100,6 +100,7 @@ class TableSelect extends FormBase {
   public function submitForm(array &$form, FormStateInterface $form_state) {
     // Display result.
 
+    //$selected_ids = array_filter($form_state->getValue('table'));
     $postdata = $form_state->getValues();
     echo '<pre>';
     print_r($postdata);
