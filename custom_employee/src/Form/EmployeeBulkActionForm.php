@@ -89,6 +89,7 @@ class EmployeeBulkActionForm extends ConfirmFormBase {
   public function getConfirmText() {
     return t('Confirm');
   }
+  
 
   /**
    * {@inheritdoc}
