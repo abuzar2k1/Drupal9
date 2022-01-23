@@ -1,0 +1,11 @@
+services:
+  custom_employee:
+    class: Drupal\custom_employee\ParamConverter\EmployeeParamConverter
+    tags:
+      - { name: paramconverter }
+      
+  custom_employee.employee_welcome_event_subscriber:
+    class: Drupal\custom_employee\EventSubscriber\EmpWelcomeSubscriber
+    arguments: ['@plugin.manager.mail', '@logger.factory', '@current_user']
+    tags:
+      - { name: event_subscriber }

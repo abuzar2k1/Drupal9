@@ -1,0 +1,7 @@
+custom_employee.add:
+  title: Add Employee
+  route_name: custom_employee.add
+  appears_on:
+    - custom_employee.list
+
+# +Add employee button on list employee page

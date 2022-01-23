@@ -1,0 +1,6 @@
+custom_employee.mymenu:
+  title: 'Employee'
+  description: 'Employee'
+  parent: main
+  menu_name: main
+  route_name: custom_employee.list
