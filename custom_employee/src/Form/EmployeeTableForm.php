@@ -46,18 +46,18 @@ class EmployeeTableForm extends FormBase {
       'actions' => 'Operations',
     ];
 
-    $limit = 5;
+    //$limit = 5;
 
     $query2 = \Drupal::database();
     $query = $query2->select('employee', 'e')
       ->fields('e')
       ->extend('Drupal\Core\Database\Query\TableSortExtender')
-      ->extend('Drupal\Core\Database\Query\PagerSelectExtender')->limit($limit);
+      ->extend('Drupal\Core\Database\Query\PagerSelectExtender');
     $query->orderByHeader($header); // sorting header fields
 
-    //$config = Drupal::config('employee.settings');
-    //$limit = ($config->get('page_limit')) ? $config->get('page_limit') : 10;
-    //$query->limit(2);
+    $config = \Drupal::config('custom_employee.settings'); // setting limit by config form
+    $limit = ($config->get('page_limit')) ? $config->get('page_limit') : 10;
+    $query->limit($limit);
 
     if (!empty($search_key)) {
       $query->condition('e.name', "%" .

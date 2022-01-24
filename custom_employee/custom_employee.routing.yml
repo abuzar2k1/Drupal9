@@ -79,3 +79,11 @@ custom_employee.action:
   requirements:
     _permission: 'delete employee'
 
+custom_employee.settings:
+  path: '/admin/config/custom_employee'
+  defaults:
+    _form: '\Drupal\custom_employee\Form\EmployeeSettingsForm'
+    _title: 'Employees page settings'
+  requirements:
+    _permission: 'administer site configuration'
+
