@@ -4,3 +4,10 @@ custom_employee.mymenu:
   parent: main
   menu_name: main
   route_name: custom_employee.list
+
+custom_employee.settings_form:
+  title: 'Custom employee'
+  route_name: custom_employee.settings
+  description: 'Custom employee - page limit'
+  parent: system.admin_config_system
+  weight: 99
