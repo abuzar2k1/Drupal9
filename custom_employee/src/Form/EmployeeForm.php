@@ -6,7 +6,8 @@ use Drupal;
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormInterface;
 use Drupal\Core\Form\FormStateInterface;
-use Drupal\Component\Utility\SafeMarkup;
+//use Drupal\Component\Utility\SafeMarkup;  // deprecated with new HTML::escape()
+use Drupal\Component\Utility\HTML;
 use Drupal\Core\Url;
 use Drupal\custom_employee\EmployeeStorage;
 use Symfony\Component\HttpFoundation\RedirectResponse;
@@ -30,8 +31,8 @@ class EmployeeForm extends FormBase {
    */
   public function buildForm(array $form, FormStateInterface $form_state, $employee = NULL) {
 
-    // $employee (see ParamConverter)
-    //Drupal\custom_employee\ParamConverter\EmployeeParamConverter
+    /* $employee (ParamConverter)
+    Drupal\custom_employee\ParamConverter\EmployeeParamConverter*/
 
     /*echo '<pre>';
     print_r($employee->id);
@@ -259,19 +260,12 @@ class EmployeeForm extends FormBase {
 
 
     $fields = [
-      //'name' => SafeMarkup::checkPlain($form_state->getValue('name')),
-      //'email' => SafeMarkup::checkPlain($form_state->getValue('email')),
-      'name' => $form_state->getValue('name'),
-      'email' => $form_state->getValue('email'),
+      'name' => HTML::escape($form_state->getValue('name')),
+      'email' => HTML::escape($form_state->getValue('email')),
       'department' => $form_state->getValue('department'),
       'country' => $form_state->getValue('country'),
       'state' => $form_state->getValue('state'),
-
-      /*'country' => 'USA',
-      'state' => 'TEST',*/
-
-      //'address' => SafeMarkup::checkPlain($form_state->getValue('address')),
-      'address' => $form_state->getValue('address'),
+      'address' => HTML::escape($form_state->getValue('address')),
       'status' => $form_state->getValue('status'),
       'profile_pic' => $profile_pic_fid,
     ];
@@ -281,7 +275,11 @@ class EmployeeForm extends FormBase {
       $employee = EmployeeStorage::load($id);
       if ($profile_pic_fid) {
         if ($profile_pic_fid !== $employee->profile_pic) {
-          //file_delete($employee->profile_pic); //not working
+
+          $file_del = File::load($employee->profile_pic);
+          $file_del->delete();
+          //file_delete($employee->profile_pic); //deprecated
+
           $file = File::load($profile_pic_fid);
           $file->setPermanent();
           $file->save();
@@ -289,7 +287,11 @@ class EmployeeForm extends FormBase {
         }
       }
       else {
-        //file_delete($employee->profile_pic);  //not working
+
+        $file_del = File::load($employee->profile_pic);
+        $file_del->delete();
+        //file_delete($employee->profile_pic);  //deprecated
+
       }
       EmployeeStorage::update($id, $fields);
       $message = 'Employee updated sucessfully';
@@ -309,7 +311,6 @@ class EmployeeForm extends FormBase {
     }
     // Image operation end
 
-    //drupal_set_message($message);
     \Drupal::messenger()->addMessage($message,'status',TRUE);
     $form_state->setRedirect('custom_employee.list');
 

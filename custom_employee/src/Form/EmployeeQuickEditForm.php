@@ -6,7 +6,8 @@ use Drupal;
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormInterface;
 use Drupal\Core\Form\FormStateInterface;
-use Drupal\Component\Utility\SafeMarkup;
+//use Drupal\Component\Utility\SafeMarkup;  // deprecated with new HTML::escape()
+use Drupal\Component\Utility\HTML;
 use Drupal\Core\Url;
 use Drupal\custom_employee\EmployeeStorage;
 use Symfony\Component\HttpFoundation\RedirectResponse;
@@ -149,10 +150,8 @@ class EmployeeQuickEditForm extends FormBase {
     }
     else {
       $fields = [
-        /*'name' => SafeMarkup::checkPlain($form_state->getValue('name')),
-        'email' => SafeMarkup::checkPlain($form_state->getValue('email')),*/
-        'name' => $form_state->getValue('name'),
-        'email' => $form_state->getValue('email'),
+        'name' => HTML::escape($form_state->getValue('name')),
+        'email' => HTML::escape($form_state->getValue('email')),
         'department' => $form_state->getValue('department'),
         'status' => $form_state->getValue('status'),
       ];
