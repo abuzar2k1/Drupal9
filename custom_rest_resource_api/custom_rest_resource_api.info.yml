@@ -1,0 +1,5 @@
+name: Custom Rest Resource Api
+description: Custom Rest Resource Api
+type: module
+core: 8.x
+core_version_requirement: ^8 || ^9

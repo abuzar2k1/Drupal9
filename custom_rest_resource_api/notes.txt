@@ -1,0 +1,30 @@
+POST REST RESOURCE METHOD
+
+Header:
+
+Content-Type : application/json
+Authorization : login with admin
+X-CSRFToken : H4QJorf283UgXG4cowW5-Wf1AFI (CSRF TOKEN API DETAIL : http://XXXXXX.com/session/token - )
+
+ENABLE MODULES
+    REST UI - (contributed)
+    RESTful Web Services - (core)
+    HTTP Basic Authentication - (core)
+
+JSON (Post from Postman):
+
+{
+    "type": [{"target_id": "article"}],
+    "title": [{"value": "created by rest resorce plugin"}],
+    "body": [{"value": "How are you?"}]
+}
+
+PERMISSIONS:
+
+RESTful Web Services
+    Access GET on Custom Get Rest Resource resource
+    Access POST on Custom post rest resource resource
+
+POSTMAN:
+
+http://XXXXXX.com/custom-post-rest-api?_format=json
